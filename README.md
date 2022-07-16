@@ -19,30 +19,10 @@ composer require mgamal92/laravel-importable
 
 ## Usage
 ```php 
-
-// Import and upload the file to specific destination
-$uploadedFile->import($dest);
-
-/** 
-Specify the headings to be used in importing process.
-This is an optional, the default is detecting the file heading.
-**/
-$uploadedFile->withHeadings(array $headings);
-
-// If you need to detect any errors while importing process.
-$uploadedFile->import($dest)->withErrors();
-
-// Send Notification when the impoting process finished.
-$uploadedFile->import($dest)->withNotification($email);
-
-// Display the progress of the importing process.
-$uploadFile->import($dest)->withProgress();
-
-// You can use the method chaining
-$uploadFile->import($dest)
-           ->withErrors()
-           ->withNotifications($email)
-           ->withProgress();
+Route::middleware('importer')->group(function () {
+    // all files will be imported automatically
+    Route::post('import-csv-files', 'UploadController@index');
+});
 ```
 
 ## Testing
