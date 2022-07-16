@@ -14,7 +14,6 @@ class ImportableServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $router = $this->app['router']
-            ->pushMiddlewareToGroup('web', Importer::class);
+
     }
 }
