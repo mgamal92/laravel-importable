@@ -21,7 +21,7 @@ composer require mgamal92/laravel-importable
 ```php 
 Route::middleware('importer')->group(function () {
     // all files will be imported automatically
-    Route::post('import-csv-files', 'UploadController@index');
+    Route::post('import-csv-files', 'ImportController@index');
 });
 ```
 
