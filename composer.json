@@ -1,0 +1,29 @@
+{
+    "name": "mgamal/laravel-importable",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MG\\Importable\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Gamal",
+            "email": "mg.dev1992@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.20"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MG\\Importable\\ImportableServiceProvider"
+            ],
+            "aliases": {
+                "Importable": "Spatie\\LaravelImageOptimizer\\Facades\\ImageOptimizer"
+            }
+        }
+    }
+}
