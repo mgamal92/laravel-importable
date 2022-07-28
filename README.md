@@ -36,4 +36,4 @@ composer test
 - [Laravel Queues](https://laravel.com/docs/9.x/queues)
 
 ## License
-This application is under the MIT License.
+This package is under the MIT License.
